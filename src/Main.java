@@ -1,15 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// 1. O import deve vir ANTES da declaração da classe
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.printf("Hello and welcome!\n"); // (Adicionei \n para quebrar a linha)
+
+        // Suas variáveis
+        int inteiro = 1;
+        String uff = "quero goza";
+        double milhao = 13.14;
+
+        // 2. A lógica do ArrayList deve ficar aqui, dentro do main principal
+        ArrayList<String> listaDeNomes = new ArrayList<>();
+
+        // 3. Agora 'uff' está no mesmo escopo e pode ser adicionada
+        listaDeNomes.add(uff);
+
+        System.out.println("Lista nomes:" + listaDeNomes);
+
+        Scanner entrada = new Scanner(System.in);
+
+        int g;
+        System.out.print("Digite um valor para 'g':");
+        g= entrada.nextInt();
+        System.out.println("O valor de 'g' é: " + g);
     }
 }
